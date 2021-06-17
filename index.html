@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Flex Galery</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="picture" data-image="0"></div>
+      <div class="picture" data-image="1"></div>
+      <div class="picture" data-image="2"></div>
+      <div class="picture" data-image="3"></div>
+      <div class="picture" data-image="4"></div>
+    </div>
+    <script>
+      function toggleOpen() {
+      console.log('Hello');
+      this.classList.toggle('open');
+    }
+
+      let boxes = Array.from(document.querySelectorAll(".picture"));
+      console.log(boxes);
+      boxes.forEach((key) => key.addEventListener("click", toggleOpen));
+    </script>
+  </body>
+</html>
